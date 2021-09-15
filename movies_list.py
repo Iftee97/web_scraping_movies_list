@@ -17,12 +17,11 @@ movies_list = []
 for tag in movie_title_tags:
     movies_list.append(tag.get("alt"))
 
-# print(movies_list)
-# print(len(movies_list))
-
+count = 100
 for movie in movies_list:
     with open("movies_list.txt", "a") as file:
-        file.write(f"{movie}\n")
+        file.write(f"{count}) {movie}\n")
+    count -= 1
 
 print("done writing to file")
 
